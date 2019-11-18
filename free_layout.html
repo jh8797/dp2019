@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>free_layout.html</title>
+        <meta charset="utf-8"/>
+        <style>
+          #wrap{
+            min-width: 1100px;/*최소 넓이*/
+            max-width: 1920px;/*최대 넓이*/
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header,nav,div,footer,h1,ul,li,h2,section{
+            /*border: solid 1px black;*/
+            /* 경계 : 실선 1픽셀두께 검은색 */
+            /*margin: 50px;*/
+            /* 바깥여백 50픽셀 */
+        }
+        header{
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding: 10px 50px;/*안쪽여백:상하 좌우*/
+        }
+        #navigation{
+            padding: 10px 50px;
+        }
+        footer{ 
+            padding: 10px 50px;   
+        }
+        header>ul>li{
+            float: left; /* 왼쪽 기준으로 흐르듯 정렬 */
+            list-style: none; /* li의 표시(동그라미) 없음(none) */
+            padding-left: 10px; /* 안쪽 여백 - 왼쪽 : 10px; */
+            padding-right: 10px; /* 안쪽 여백 - 오른쪽 : 10px; */
+            border-right: solid 2px rgb(255, 166, 181); /* 경계선 - 오른쪽 : 실선 2px 회색; */
+            /*모양을 위해 줄을 그으는 건 css로 만들기*/
+        }
+        header>ul>li:nth-child(5){
+            /* li의 5번째를 선택(select) */
+            border: none; /* 경계선: 없음 */   
+        }
+        header>ul{
+            padding: 0px;
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-top: 13px;
+            margin-bottom: 13px;
+        }
+        .clear {clear: both; height: 0; overflow: hidden;}
+        /* 클래스명 clear {지움: 양쪽; 높이 0; 넘쳤을때: 숨김;} */
+        .float_left {float: left;}
+        .float_right {float: right;}
+
+        h1{margin: 0px;}
+        h2{margin: 7px;}
+        #zoom /* 앞에 #은 id와 class의 차이 (.과 #)*/{
+            margin: 17px;
+        }
+        #navigetion li{
+            float: left; /*왼쪽 기준으로 둥둥 떠다니듯이 */
+            list-style: none;
+            padding-left: 20px;
+            padding-right: 20px;
+            }
+            #navigetion{
+                background-color:rgb(255, 166, 181) /* 컬러코드 #rgb */
+            }
+            dd{
+                margin: 0px;
+            }
+            dt{
+                margin-top: 25px;
+                margin-bottom: 25px;
+                font-weight: bold;
+            }
+            div>section{
+                padding: 50px;
+            }
+            div>section:nth-child(1){
+                background-color:white;
+            }
+            div>section:nth-child(2){
+                background-color: white;
+            }
+            div>section:nth-child(3){
+                background-color: white;
+            }
+            div>section:nth-child(4){
+                background-color: white;
+            }
+            div>section h3{
+                color: #fd7c92;
+                margin-top: 45px;
+                margin-bottom: 45px;
+            }
+            .content_part{
+                width: 480px;
+                float: left; /* 왼쪽 기준으로 둥둥 떠있게 */
+                margin: 10px;
+                /* margin-border-padding-content-padding-border-margin */
+            }
+            div>section>div{
+                width: 1000px;
+                margin-left: auto;
+                margin-right: auto;
+                /* 블록형 태그의 가운데 정렬법 */
+            }
+            footer>ul{
+              padding: 0px;
+            }
+            footer ul>li{
+                list-style: none; /*리스트-형태: 없음 */
+                float: left;
+            }
+            /*
+            footer>ul:nth-child(1)>li{
+                margin-left: 10px;
+                margin-right: 10px;
+            } 
+            */
+            #footer_div{ float: left; }
+            #footer2{ float:right; }
+            #footer1>li{
+                padding-left: 10px;
+                padding-right: 10px;
+                border-right: solid 1px #aaa;
+            }
+            #footer1>li:nth-child(6){
+              border: none;
+            }
+            #footer2>li{
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            footer{
+              background-color: rgb(255, 166, 181);
+              color: black;
+            }
+        </style>
+    </head>
+    <body>
+            <a href="index.html">뒤로가기</a>
+            <br>
+
+        <div id="wrap">
+            <header>
+                <h1 class="float_left">
+                    <a href="#">
+                        <img src="images/br.png"/>
+                    </a>
+                </h1> <!-- 제목 -->
+                <ul class="float_left">
+                    
+                    <div class="clear"></div>
+                </ul>
+                <div id="zoom" class="float_right">
+                    <img src="images/layout1_head_zoom.jpg" />
+                </div> <!--의미 못찾을때는 그냥 css 아닌걸로-->
+                <div class="clear"></div>
+            </header>
+            <nav id="navigetion">
+                <h2 class="float_left"></h2>
+                <ul class="float_right">
+                    <li>FLAVOR OF MONTH</li>
+                    <li>MENU</li>
+                    <li>EVENT</li>
+                    <li>ABOUT</li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </nav>
+            <div>
+                <section>
+                    <div>
+                     <h3>BASKINROBBINS INSTAGRAM</h3>
+                        <div class="content_part">
+                          <img src="images/dsdsds.JPG">
+                    
+                        </div>
+                        <div class="content_part">
+                           <img src="images/rrrrr.JPG">
+                
+                        </div>
+                        <div class="content_part">
+                            <img src="images/gfgfg.JPG">
+                 
+                         </div>
+                         <div class="content_part">
+                            <img src="images/rrrrr.JPG">
+                 
+                         </div>
+                        <div class="clear"></div>
+                    </div >
+                </section>
+                <section>
+                    <div>
+                     <h3>SNS</h3>
+                        <div class="content_part">
+                          <img src="images/untitled.png">
+
+                          <img src="images/vvvvvvvvvvv.png">
+
+                          <img src="images/xsdssd.png">
+
+                          <img src="images/dsdsdasda.png">
+
+                          <img src="images/eeeeeeeeeeeeeeee.png">
+
+                        </div>
+                     <div class="clear"></div>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                     <h3>HAPPY ORDER & DELIVERY</h3>
+                        <div class="content_part">
+                          <img src="images/img_happyorder_delivery.jpg">
+                          <dl>
+                             <dt>       
+                             </dt>
+                             <dd>  
+                             </dd>
+                           </dl>
+                        </div>
+                           <div>
+                             <h3>BR STORE</h3>
+                               <div class="content_part">
+                                 <img src="images/img_store.jpg">
+                                 <dl>
+                                    <dt>
+                                           
+                                    </dt>
+                                    <dd>
+                                         
+                                    </dd>
+                                  </dl>
+                               </div>
+                               <div class="clear"></div>
+                            </div>
+                </section>
+                <section>
+                    <div>
+                     <h3>BR EVENT</h3>
+                        <div class="content_part">
+                          <img src="images/banner_delivery_bm.png">
+                          <dl>
+                             <dt>
+                                    
+                                    배달의 민족에서 빠르게 주문하세요!
+                             </dt>
+                             <dd>
+                                   상시진행
+                             </dd>
+                           </dl>
+                        </div>
+                        <div class="content_part">
+                            <img src="images/banner_delivery_ygy.png">
+                            <dl>
+                               <dt>
+                                      
+                                요기오에서 손쉽게 주문하세요!
+                                      
+                               </dt>
+                               <dd>
+                                     상시진행
+                               </dd>
+                             </dl>
+                          </div>
+                          <div class="content_part">
+                            <img src="images/banner_delivery.png">
+                            <dl>
+                               <dt>
+                                      
+                                해피오더 딜리버리로 간편하게 주문하세요!
+                                      
+                               </dt>
+                               <dd>
+                                     상시진행
+                               </dd>
+                             </dl>
+                          </div>
+                               <div class="content_part">
+                                 <img src="images/banner_delivery_kakao.png">
+                                 <dl>
+                                    <dt>
+                                           
+                                           카카오톡 준문하기에서 편리하게 주문하세요!
+                                    </dt>
+                                    <dd>
+                                           상시진행
+                                    </dd>
+                                  </dl>
+                               </div>
+                               <div class="clear"></div>
+                            </div>
+                </section>
+            
+        <footer>
+        <div id="footer_div">
+          <ul id="footer1">
+                <li>점포개설문의</li>
+                <li>채용문의</li>
+                <li>윤리신고센터</li>
+                <li>이용약관</li>
+                <li>개인정보처리방침</li>
+                <li>거래희망회사 사전등록</li>
+                <div class="clear"></div>
+          </ul>
+                    <p>
+                     Copyrigⓒ2016 BRKOREA Company. All Rights Reserved
+                        </p>
+                  </div>
+                <ul id="footer2">
+                    <li><img src="images/icon_facebook.png"></li>
+                    <li><img src="images/icon_twitter.png"></li>
+                    <li><img src="images/icon_youtube.png"></li>
+                    <li><img src="images/icon_instgram.png"></li>
+                    <li><img src="images/icon_blog.png"></li>
+                    <div class="clear"></div>
+                  </ul>
+                  <div class="clear"></div>
+            </footer>
+        </div>
+    </body>
+</html>
